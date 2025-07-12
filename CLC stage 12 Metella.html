@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 12 - What happened to Metella?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .sentence-line {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dropdown {
+      flex: 1;
+      padding: 5px;
+    }
+
+    .dropdown select {
+      width: 100%;
+    }
+
+    button {
+      display: block;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+      white-space: pre-line; 
+    }
+  </style>
+</head>
+<body>
+  <h1>CLC: Stage 12 Storytelling - what happened to Metella?</h1>
+
+  <div id="sentences-container">
+    <div class="sentence-line">
+      <div class="dropdown">
+<!-- Nominative Dropdown -->
+<select>
+  <option value="" selected disabled>Select Nominative</option>
+  <option value="Metella">Metella</option>
+  <option value="Melissa">Melissa</option>
+  <option value="Grumio">Grumio</option>
+  <option value="mater">mater</option>
+  <option value="ancilla">ancilla</option>
+  <option value="servus">servus</option>
+  <option value="amicus">amicus</option>
+  <option value="mons iratus">mons iratus</option>
+  <option value="cinis">cinis</option>
+  <option value="flamma">flamma</option>
+  <option value="sonus">sonus</option>
+  <option value="tremor">tremor</option>
+  <option value="nubis mirabilis">nubis mirabilis</option>
+  <option value="turba">turba</option>
+</select>
+      </div>
+      <div class="dropdown">
+<!-- Accusative Dropdown -->
+<select>
+  <option value="" selected disabled>Select Accusative</option>
+  <option value="Metellam">Metellam</option>
+  <option value="Melissam">Melissam</option>
+  <option value="Grumionem">Grumionem</option>
+  <option value="matrem">matrem</option>
+  <option value="ancillam">ancillam</option>
+  <option value="servum">servum</option>
+  <option value="amicum">amicum</option>
+  <option value="montem iratum">montem iratum</option>
+  <option value="cinerem">cinerem</option>
+  <option value="flammam">flammam</option>
+  <option value="sonum">sonum</option>
+  <option value="clamorem">clamorem</option>
+  <option value="tremorem">tremorem</option>
+  <option value="nubem mirabilem">nubem mirabilem</option>
+  <option value="amorem">amorem</option>
+  <option value="pecuniam">pecuniam</option>
+  <option value="epistulam">epistulam</option>
+  <option value="spem">spem</option>
+  <option value="turbam">turbam</option>
+  <option value="familiam">familiam</option>
+</select>
+      </div>
+      <div class="dropdown">
+<!-- Preposition Dropdown -->
+<select>
+  <option value="" selected disabled>Select Preposition</option>
+  <option value="in urbe">in urbe</option>
+  <option value="ad urbem">ad urbem</option>
+  <option value="ex urbe">ex urbe</option>
+  <option value="in villa">in villa</option>
+  <option value="ad villam">ad villam</option>
+  <option value="e villa">e villa</option>
+  <option value="in portu">in portu</option>
+  <option value="ad portum">ad portum</option>
+  <option value="e portu">e portu</option>
+  <option value="prope montem">prope montem</option>
+  <option value="ad montem">ad montem</option>
+  <option value="e monte">e monte</option>
+</select>
+      </div>
+      <div class="dropdown">
+<select>
+  <option value="" selected disabled>Select Adverb</option>
+  <option value="celeriter">celeriter</option>
+  <option value="subito">subito</option>
+  <option value="silenter">silenter</option>
+  <option value="furtim">furtim</option>
+  <option value="valde">valde</option>
+  <option value="audacter">audacter</option>
+  <option value="timide">timide</option>
+  <option value="statim">statim</option>
+  <option value="vehementer">vehementer</option>
+  <option value="lente">lente</option>
+  <option value="fortiter">fortiter</option>
+</select>
+      </div>
+      <div class="dropdown">
+<select>
+  <option value="" selected disabled>Select Verb</option>
+  <option value="ambulabat">ambulabat</option>
+  <option value="ambulavit">ambulavit</option>
+  <option value="curriebat">curriebat</option>
+  <option value="cucurrit">cucurrit</option>
+  <option value="festinabat">festinabat</option>
+  <option value="festinavit">festinavit</option>
+  <option value="fugiebat">fugiebat</option>
+  <option value="fugit">fugit</option>
+  <option value="salutabat">salutabat</option>
+  <option value="salutavit">salutavit</option>
+  <option value="videbat">videbat</option>
+  <option value="vidit">vidit</option>
+  <option value="audiebat">audiebat</option>
+  <option value="audivit">audivit</option>
+  <option value="sentiebat">sentiebat</option>
+  <option value="sensit">sensit</option>
+  <option value="oppugnabat">oppugnabat</option>
+  <option value="oppugnavit">oppugnavit</option>
+  <option value="necabat">necabat</option>
+  <option value="necavit">necavit</option>
+  <option value="periit">periit</option>
+</select>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id="add-sentence-btn">Add Sentence</button>
+  <p id="result"></p>
+
+  <script>
+    const sentencesContainer = document.getElementById('sentences-container');
+    const addSentenceBtn = document.getElementById('add-sentence-btn');
+    const resultElement = document.getElementById('result');
+
+    function createDropdown(options, placeholder) {
+      const dropdown = document.createElement('div');
+      dropdown.className = 'dropdown';
+
+      const select = document.createElement('select');
+      select.innerHTML = `<option value="" selected disabled>Select ${placeholder}</option>`;
+      options.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option;
+        optionElement.textContent = option;
+        select.appendChild(optionElement);
+      });
+
+      dropdown.appendChild(select);
+
+      return dropdown;
+    }
+
+function createSentenceLine() {
+  const sentenceLine = document.createElement('div');
+  sentenceLine.className = 'sentence-line';
+
+const sentence = {
+  nominative: createDropdown(
+    [' ', 'amicus', 'ancilla', 'cinis', 'flamma', 'Grumio', 'mater', 'Melissa', 'Metella', 'mons iratus', 'nubis mirabilis', 'servus', 'sonus', 'tremor', 'turba'],
+    'Nominative'
+  ),
+  accusative: createDropdown(
+    [' ', 'amicum', 'amorem', 'ancillam', 'cinerem', 'clamorem', 'epistulam', 'familiam', 'flammam', 'Grumionem', 'matrem', 'Melissam', 'Metellam', 'montem iratum', 'nubem mirabilem', 'pecuniam', 'servum', 'sonum', 'spem', 'tremorem', 'turbam'],
+    'Accusative'
+  ),
+  preposition: createDropdown(
+    [' ', 'ad montem', 'ad portum', 'ad urbem', 'ad villam', 'e monte', 'e portu', 'e villa', 'ex urbe', 'in portu', 'in urbe', 'in villa', 'prope montem'],
+    'Preposition'
+  ),
+  adverb: createDropdown(
+    ['audacter', 'celeriter', 'fortiter', 'furtim', 'lente', 'statim', 'subito', 'tacite', 'timide', 'valde', 'vehementer'],
+    'Adverb'
+  ),
+  verb: createDropdown(
+    [
+      'abstulit','ambulabat', 'ambulavit', 'amisit',
+      'audiebat', 'audivit',
+      'curriebat', 'cucurrit',
+      'delevit',
+      'festinabat', 'festinavit',
+      'fugiebat', 'fugit', 'invenit',
+      'laborabat',
+      'necabat', 'necavit',
+      'oppugnabat', 'oppugnavit',
+      'periit',
+      'salutabat', 'salutavit',
+      'scribebat', 'scripsit',
+      'sentiebat', 'sensit',
+      'timebat',
+      'videbat', 'vidit',
+
+    ],
+    'Verb'
+  )
+};
+
+  Object.values(sentence).forEach(dropdown => {
+    sentenceLine.appendChild(dropdown);
+  });
+
+  sentencesContainer.appendChild(sentenceLine);
+}
+
+    addSentenceBtn.addEventListener('click', createSentenceLine);
+
+    function updateResult() {
+      const sentenceLines = document.querySelectorAll('.sentence-line');
+      let result = '';
+
+      sentenceLines.forEach(sentenceLine => {
+        const selectedItems = sentenceLine.querySelectorAll('.dropdown select');
+const words = Array.from(selectedItems).map(select => select.value);
+    const filteredWords = words.map(word => {
+      switch (word) {
+        case 'Select':
+        case 'Select Nominative':
+        case 'Select Accusative':
+        case 'Select Preposition':
+        case 'Select Adverb':
+        case 'Select Verb':
+          return '';
+        default:
+          return word;
+      }
+    }).filter(word => word !== '');
+
+    const sentenceText = filteredWords.join(' ');
+
+        if (sentenceText !== '') {
+          result += sentenceText + '. ';
+        }
+      });
+
+      resultElement.textContent = result;
+    }
+
+    sentencesContainer.addEventListener('input', updateResult);
+  </script>
+</body>
+</html>
